@@ -39,12 +39,12 @@ function colorModeToggle() {
   let lightColors = {};
   let darkColors = {};
   cssVariables.split(",").forEach(function (item) {
-    let lightValue = computed.getPropertyValue(`--color--${item}`);
-    let darkValue = computed.getPropertyValue(`--dark--${item}`);
+    let lightValue = computed.getPropertyValue(`--theme-light--${item}`);
+    let darkValue = computed.getPropertyValue(`--theme-dark--${item}`);
     if (lightValue.length) {
       if (!darkValue.length) darkValue = lightValue;
-      lightColors[`--color--${item}`] = lightValue;
-      darkColors[`--color--${item}`] = darkValue;
+      lightColors[`--theme-light--${item}`] = lightValue;
+      darkColors[`--theme-light--${item}`] = darkValue;
     }
   });
 
