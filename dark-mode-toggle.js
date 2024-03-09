@@ -86,7 +86,7 @@ function colorModeToggle() {
     }
   }
 
-  function checkPreference(e) {
+  /**function checkPreference(e) {
     goDark(e.matches, false);
   }
   const colorPreference = window.matchMedia("(prefers-color-scheme: dark)");
@@ -99,7 +99,7 @@ function colorModeToggle() {
     storagePreference === "true" ? goDark(true, false) : goDark(false, false);
   } else {
     checkPreference(colorPreference);
-  }
+  }**/
 
   window.addEventListener("DOMContentLoaded", (event) => {
     toggleEl = document.querySelectorAll("[tr-color-toggle]");
